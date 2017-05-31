@@ -1,5 +1,7 @@
 <?php
 
+namespace jakeroid\tools;
+
 // SimpleXLSX php class v0.4
 // MS Excel 2007 workbooks reader
 // Example: 
@@ -16,11 +18,13 @@
 // 0.3 - fixed empty cells (Gonzo patch)
 
 class SimpleXLSX {
+
 	// Don't remove this string! Created by Sergey Schuchkin from http://www.sibvison.ru - professional php developers team 2010-2011
 	private $sheets;
 	private $hyperlinks;
 	private $package;
 	private $sharedstrings;
+
 	// scheme
 	const SCHEMA_OFFICEDOCUMENT  =  'http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument';
 	const SCHEMA_RELATIONSHIP  =  'http://schemas.openxmlformats.org/package/2006/relationships';
@@ -32,20 +36,13 @@ class SimpleXLSX {
 		$this->_parse();
 	}
 
-
-
 	public function sheets() {
 		return $this->sheets;
 	}
 
-
-
 	public function sheetsCount() {
 		return count($this->sheets);
 	}
-
-
-
 
 	public function worksheet( $worksheet_id ) {
 		if ( isset( $this->sheets[ $worksheet_id ] ) ) {
@@ -63,8 +60,6 @@ class SimpleXLSX {
 			throw new Exception('Worksheet '.$worksheet_id.' not found.');
 	}
 
-
-
 	/**
 	*	Returns col and row number of a worksheet.
 	*
@@ -77,8 +72,6 @@ class SimpleXLSX {
 		$index = $this->_columnIndex( $d[1] );		
 		return array( $index[0]+1, $index[1]+1);
 	}
-
-
 
 	/**
 	*	Get file data.
@@ -117,8 +110,6 @@ class SimpleXLSX {
 		return $rows;
 	}
 
-
-
 	/**
 	*	?????
 	*/
@@ -142,8 +133,6 @@ class SimpleXLSX {
 		return $rows;
 
 	}
-
-
 
 	/**
 	*

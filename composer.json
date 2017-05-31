@@ -1,0 +1,31 @@
+{
+  "name": "jakeroid/simplexlsx",
+  "description": "Simple XLSX class.",
+  "keywords": [
+    "xlsx",
+    "php",
+    "tool"
+  ],
+  "homepage": "https://github.com/Jakeroid/simplexlsx",
+  "type": "library",
+  "license": "BSD-3-Clause",
+  "support": {
+    "issues": "https://github.com/Jakeroid/simplexlsx/issues",
+    "source": "https://github.com/Jakeroid/simplexlsx"
+  },
+  "authors": [
+    {
+      "name": "Ivan Karabadzhak",
+      "email": "jakeroid.s@gmail.com",
+      "homepage": "http://jakeroid.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "jakeroid\\tools\\": "src"
+    }
+  },
+  "require": {
+    "php": ">=5.4.0"
+  }
+}
